@@ -30,7 +30,7 @@ public class TrabalhoProgramacao {
                         int pizzaPequena = Integer.parseInt(JOptionPane.showInputDialog("Digite a opção do sabor desejado.\n" + "1 - Calabresa     -     R$ 14,75\n" + "2 - Pepperoni     -     R$ 16,50\n" + "3 - À moda da casa do Seu " + nome +"     -     R$ 17,99\n" + "4 - Mussarela     -     R$ 14,75\n" + "5 - Custo atual\n" + "6 - Retornar ao Cardápio"));
                         while (pizzaPequena != 6){
                             switch(pizzaPequena){
-                                case 1:{
+                                case 1:
                                     
                                     
                                     int finalizarCalabresa = JOptionPane.showOptionDialog(null, 
@@ -42,12 +42,12 @@ public class TrabalhoProgramacao {
                                             JOptionPane.showMessageDialog(null, "Você comprou "+ quantidadeCalabresa +" Pizza(s) de Calabresa!");
                                     pizzaPequena = Integer.parseInt(JOptionPane.showInputDialog("Digite a opção do sabor desejado.\n" + "1 - Calabresa     -     R$ 14,75\n" + "2 - Pepperoni     -     R$ 16,50\n" + "3 - À moda da casa do Seu " + nome +"     -     R$ 17,99\n" + "4 - Mussarela     -     R$ 14,75\n" + "5 - Custo atual\n" + "6 - Retornar ao Cardápio"));} else if (finalizarCalabresa == JOptionPane.NO_OPTION) {
                                         custo += 0;
-                                        custoTotalDia = (quantidadeCalabresa * 14.75);
+                                        custoTotalDia = 0;
                                         
                                         
                                   pizzaPequena = Integer.parseInt(JOptionPane.showInputDialog("Digite a opção do sabor desejado.\n" + "1 - Calabresa     -     R$ 14,75\n" + "2 - Pepperoni     -     R$ 16,50\n" + "3 - À moda da casa do Seu " + nome +"     -     R$ 17,99\n" + "4 - Mussarela     -     R$ 14,75\n" + "5 - Custo atual\n" + "6 - Retornar ao Cardápio"));    
                                     }
-                                break;}
+                                break;
                                 case 2:{
                                
                                     
@@ -95,11 +95,11 @@ public class TrabalhoProgramacao {
                                   pizzaPequena = Integer.parseInt(JOptionPane.showInputDialog("Digite a opção do sabor desejado.\n" + "1 - Calabresa     -     R$ 14,75\n" + "2 - Pepperoni     -     R$ 16,50\n" + "3 - À moda da casa do Seu " + nome +"     -     R$ 17,99\n" + "4 - Mussarela     -     R$ 14,75\n" + "5 - Custo atual\n" + "6 - Retornar ao Cardápio"));     
                                     }
                                     break;}
-                                case 5: {
+                                case 5: 
                                     JOptionPane.showMessageDialog(null, "O custo atual é: " + custo);
                                     pizzaPequena = Integer.parseInt(JOptionPane.showInputDialog("Digite a opção do sabor desejado.\n" + "1 - Calabresa     -     R$ 14,75\n" + "2 - Pepperoni     -     R$ 16,50\n" + "3 - À moda da casa do Seu " + nome +"     -     R$ 17,99\n" + "4 - Mussarela     -     R$ 14,75\n" + "5 - Custo atual\n" + "6 - Retornar ao Cardápio"));
-                                break;}
-                            } break;
+                                break;
+                            } 
                         } 
                         escolhaPizza = JOptionPane.showOptionDialog(null, "Selecione o tamanho desejado. Os preços são diferentes conforme o tamanho da Pizza." , "Cardápio - Pizzas", JOptionPane.DEFAULT_OPTION, JOptionPane.QUESTION_MESSAGE, null, tamanhos, tamanhos[0]);
                         
@@ -111,7 +111,7 @@ public class TrabalhoProgramacao {
                         int pizzaMedia = Integer.parseInt(JOptionPane.showInputDialog("Digite a opção do sabor desejado.\n" + "1 - Calabresa     -     R$ 24,75\n" + "2 - Pepperoni     -     R$ 26,50\n" + "3 - À moda da casa do Seu " + nome + "     -     R$ 27,99\n" + "4 - Mussarela     -     R$ 24,75\n" + "5 - Custo atual\n" + "6 - Retornar ao Cardápio"));
                         while (pizzaMedia != 6){
                             switch(pizzaMedia){
-                                case 1:{
+                                case 1:
                                     
                                     
                                     int finalizarCalabresa = JOptionPane.showOptionDialog(null, 
@@ -126,9 +126,10 @@ public class TrabalhoProgramacao {
                                         custoTotalDia += 0;
                                         
                                  pizzaMedia = Integer.parseInt(JOptionPane.showInputDialog("Digite a opção do sabor desejado.\n" + "1 - Calabresa     -     R$ 24,75\n" + "2 - Pepperoni     -     R$ 26,50\n" + "3 - À moda da casa do Seu " + nome + "     -     R$ 27,99\n" + "4 - Mussarela     -     R$ 24,75\n" + "5 - Custo atual\n" + "6 - Retornar ao Cardápio"));
-                                    }
-                                break;}
-                                case 2:{
+                                
+                                  }
+                                break;
+                                case 2:
                                
                                     
                                       int finalizarPepperoni = JOptionPane.showOptionDialog(null, 
@@ -136,7 +137,7 @@ public class TrabalhoProgramacao {
                                     if (finalizarPepperoni == JOptionPane.YES_OPTION){
                                             int quantidadePepperoni = Integer.parseInt(JOptionPane.showInputDialog("Quantas?")); 
                                             custo += (quantidadePepperoni * 26.50);
-                                            custoTotalDia += (quantidadeMussarela * 26.50);
+                                            custoTotalDia += (quantidadePepperoni * 26.50);
                                             JOptionPane.showMessageDialog(null, "Você comprou "+ quantidadePepperoni +" Pizza(s) média de Pepperoni!");
                                    pizzaMedia = Integer.parseInt(JOptionPane.showInputDialog("Digite a opção do sabor desejado.\n" + "1 - Calabresa     -     R$ 24,75\n" + "2 - Pepperoni     -     R$ 26,50\n" + "3 - À moda da casa do Seu " + nome + "     -     R$ 27,99\n" + "4 - Mussarela     -     R$ 24,75\n" + "5 - Custo atual\n" + "6 - Retornar ao Cardápio"));} else if (finalizarPepperoni == JOptionPane.NO_OPTION) {
                                         custo += 0;
@@ -144,8 +145,8 @@ public class TrabalhoProgramacao {
                                         
                                   pizzaMedia = Integer.parseInt(JOptionPane.showInputDialog("Digite a opção do sabor desejado.\n" + "1 - Calabresa     -     R$ 24,75\n" + "2 - Pepperoni     -     R$ 26,50\n" + "3 - À moda da casa do Seu " + nome + "     -     R$ 27,99\n" + "4 - Mussarela     -     R$ 24,75\n" + "5 - Custo atual\n" + "6 - Retornar ao Cardápio")); 
                                     }                              
-                                break;}
-                                case 3:{
+                                break;
+                                case 3:
                                       int finalizarModa = JOptionPane.showOptionDialog(null, 
                                      "Você deseja comprar Pizza à moda da casa do Seu " + nome,"", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, null, null);
                                     if (finalizarModa == JOptionPane.YES_OPTION){
@@ -159,8 +160,8 @@ public class TrabalhoProgramacao {
                                         
                                  pizzaMedia = Integer.parseInt(JOptionPane.showInputDialog("Digite a opção do sabor desejado.\n" + "1 - Calabresa     -     R$ 24,75\n" + "2 - Pepperoni     -     R$ 26,50\n" + "3 - À moda da casa do Seu " + nome + "     -     R$ 27,99\n" + "4 - Mussarela     -     R$ 24,75\n" + "5 - Custo atual\n" + "6 - Retornar ao Cardápio"));
                                     }
-                                    break;}
-                                case 4: {
+                                    break;
+                                case 4: 
                                       int finalizarMussarela = JOptionPane.showOptionDialog(null, 
                                      "Você deseja comprar Pizza de Mussarela?","", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, null, null);
                                     if (finalizarMussarela == JOptionPane.YES_OPTION){
@@ -174,12 +175,12 @@ public class TrabalhoProgramacao {
                                         
                                  pizzaMedia = Integer.parseInt(JOptionPane.showInputDialog("Digite a opção do sabor desejado.\n" + "1 - Calabresa     -     R$ 24,75\n" + "2 - Pepperoni     -     R$ 26,50\n" + "3 - À moda da casa do Seu " + nome + "     -     R$ 27,99\n" + "4 - Mussarela     -     R$ 24,75\n" + "5 - Custo atual\n" + "6 - Retornar ao Cardápio")); 
                                     }
-                                    break;}
-                                case 5: {
+                                    break;
+                                case 5: 
                                     JOptionPane.showMessageDialog(null, "O custo atual é: " + custo);
                                     pizzaMedia = Integer.parseInt(JOptionPane.showInputDialog("Digite a opção do sabor desejado.\n" + "1 - Calabresa     -     R$ 24,75\n" + "2 - Pepperoni     -     R$ 26,50\n" + "3 - À moda da casa do Seu " + nome + "     -     R$ 27,99\n" + "4 - Mussarela     -     R$ 24,75\n" + "5 - Custo atual\n" + "6 - Retornar ao Cardápio"));
-                                break;} 
-                            }  break; }
+                                break; 
+                            }  
                         
                         } 
                     
@@ -188,11 +189,11 @@ public class TrabalhoProgramacao {
                      break;
                     
                     //Pizza grande
-                    case 2:{
+                    case 2:
                          int pizzaGrande = Integer.parseInt(JOptionPane.showInputDialog("Digite a opção do sabor desejado.\n" + "1 - Calabresa     -     R$ 34,75\n" + "2 - Pepperoni     -     R$ 36,50\n" + "3 - À moda da casa do Seu " + nome + "     -     R$ 37,99\n" + "4 - Mussarela     -     R$ 34,75\n" + "5 - Custo atual\n" + "6 - Retornar ao Cardápio"));
                         while (pizzaGrande != 6){
                             switch(pizzaGrande){
-                                case 1:{
+                                case 1:
                                     
                                     
                                     int finalizarCalabresa = JOptionPane.showOptionDialog(null, 
@@ -207,8 +208,8 @@ public class TrabalhoProgramacao {
                                         custoTotalDia += 0;
                                 pizzaGrande = Integer.parseInt(JOptionPane.showInputDialog("Digite a opção do sabor desejado.\n" + "1 - Calabresa     -     R$ 34,75\n" + "2 - Pepperoni     -     R$ 36,50\n" + "3 - À moda da casa do Seu " + nome + "     -     R$ 37,99\n" + "4 - Mussarela     -     R$ 34,75\n" + "5 - Custo atual\n" + "6 - Retornar ao Cardápio"));
                                     }
-                                break;}
-                                case 2:{
+                                break;
+                                case 2:
                                
                                     
                                       int finalizarPepperoni = JOptionPane.showOptionDialog(null, 
@@ -224,8 +225,8 @@ public class TrabalhoProgramacao {
                                         
                                   pizzaGrande = Integer.parseInt(JOptionPane.showInputDialog("Digite a opção do sabor desejado.\n" + "1 - Calabresa     -     R$ 34,75\n" + "2 - Pepperoni     -     R$ 36,50\n" + "3 - À moda da casa do Seu " + nome + "     -     R$ 37,99\n" + "4 - Mussarela     -     R$ 34,75\n" + "5 - Custo atual\n" + "6 - Retornar ao Cardápio"));
                                     }                              
-                                break;}
-                                case 3:{
+                                break;
+                                case 3:
                                       int finalizarModa = JOptionPane.showOptionDialog(null, 
                                      "Você deseja comprar Pizza à moda da casa do Seu " + nome,"", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, null, null);
                                     if (finalizarModa == JOptionPane.YES_OPTION){
@@ -239,8 +240,8 @@ public class TrabalhoProgramacao {
                                         
                                pizzaGrande = Integer.parseInt(JOptionPane.showInputDialog("Digite a opção do sabor desejado.\n" + "1 - Calabresa     -     R$ 34,75\n" + "2 - Pepperoni     -     R$ 36,50\n" + "3 - À moda da casa do Seu " + nome + "     -     R$ 37,99\n" + "4 - Mussarela     -     R$ 34,75\n" + "5 - Custo atual\n" + "6 - Retornar ao Cardápio"));
                                     }
-                                    break;}
-                                case 4: {
+                                    break;
+                                case 4: 
                                       int finalizarMussarela = JOptionPane.showOptionDialog(null, 
                                      "Você deseja comprar Pizza de Mussarela?","", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, null, null);
                                     if (finalizarMussarela == JOptionPane.YES_OPTION){
@@ -254,13 +255,13 @@ public class TrabalhoProgramacao {
                                         
                                 pizzaGrande = Integer.parseInt(JOptionPane.showInputDialog("Digite a opção do sabor desejado.\n" + "1 - Calabresa     -     R$ 34,75\n" + "2 - Pepperoni     -     R$ 36,50\n" + "3 - À moda da casa do Seu " + nome + "     -     R$ 37,99\n" + "4 - Mussarela     -     R$ 34,75\n" + "5 - Custo atual\n" + "6 - Retornar ao Cardápio"));
                                     }
-                                    break;}
-                                case 5: {
+                                    break;
+                                case 5: 
                                     JOptionPane.showMessageDialog(null, "O custo atual é: " + custo);
                                   pizzaGrande = Integer.parseInt(JOptionPane.showInputDialog("Digite a opção do sabor desejado.\n" + "1 - Calabresa     -     R$ 34,75\n" + "2 - Pepperoni     -     R$ 36,50\n" + "3 - À moda da casa do Seu " + nome + "     -     R$ 37,99\n" + "4 - Mussarela     -     R$ 34,75\n" + "5 - Custo atual\n" + "6 - Retornar ao Cardápio"));
-                                break;}
+                                break;
                             
-                    }   break; }
+                    }
                     
                   
                         } 
@@ -268,7 +269,7 @@ public class TrabalhoProgramacao {
                    
               escolhaPizza = JOptionPane.showOptionDialog(null, "Selecione o tamanho desejado. Os preços são diferentes conforme o tamanho da Pizza." , "Cardápio - Pizzas", JOptionPane.DEFAULT_OPTION, JOptionPane.QUESTION_MESSAGE, null, tamanhos, tamanhos[0]);  
               
-                        
+                        break;
                 }
               
         }
@@ -751,3 +752,4 @@ public class TrabalhoProgramacao {
     }
 }
     
+}
