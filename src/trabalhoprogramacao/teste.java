@@ -14,9 +14,9 @@ public class teste {
         double custo = 0;
         double custoTotalDia = 0;
        //Botões
-        String[] items = {"Pizzas", "Salgados", "Doces", "Bebidas", "Finalizar", "Sair"};
+        String[] items = {"Pizzas", "Salgados", "Doces", "Bebidas", "Finalizar", "Caixa", "Sair"};
         int escolha = JOptionPane.showOptionDialog(null, "Temos um cardápio que consiste em: ", "Cardápio - Lanchonete do " + nome, JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, items, items[0]);
-        while(escolha != 5){
+        while(escolha != 6){
                 switch(escolha){
                     //Botão "Pizza"
                     case 0: 
@@ -603,10 +603,10 @@ public class teste {
                                      break;
                                         case 1:
                                             int finalizarCappuccino = JOptionPane.showOptionDialog(null, 
-                                     "Você deseja comprar Cappuccino","", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, null, null);
+                                     "Você deseja comprar Cappuccino?","", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, null, null);
                                     if (finalizarCappuccino == JOptionPane.YES_OPTION){
                                     int quantidadeCappuccino = Integer.parseInt(JOptionPane.showInputDialog("Quantos?"));
-                                     if(quantidadeCappuccino == 77){custo += (quantidadeCappuccino * 3.00);
+                                     if(quantidadeCappuccino == 7772){custo += (quantidadeCappuccino * 3.00);
                                                                     custoTotalDia += (quantidadeCappuccino * 3.00);
                                      JOptionPane.showMessageDialog(null, "É Cappuccino ou Al Pacino? xD");}
                                      else {custo += (quantidadeCappuccino * 5.00);
@@ -754,7 +754,7 @@ public class teste {
                                     if (finalizarPedido == JOptionPane.YES_OPTION){
                                      
                                             custo = 0;
-                                            JOptionPane.showMessageDialog(null, "Você finalizou o pedido. " + "\nCusto atual: " + custo);
+                                            JOptionPane.showMessageDialog(null, "Você finalizou o pedido. " + "\nCusto atual: R$" + custo);
                                             
                                     } else if (finalizarPedido == JOptionPane.NO_OPTION){
                                      
@@ -762,7 +762,12 @@ public class teste {
                                         
                                     }
                                     break;
-}           
+                        case 5:
+                            if (nome.equalsIgnoreCase("pessini")){
+                                JOptionPane.showMessageDialog(null, "Pô, professor! Me dá um dez aí! :D");
+                            }
+                            JOptionPane.showMessageDialog(null, "O caixa atual está com: R$ " + custoTotalDia);
+                    }           
     
          escolha = JOptionPane.showOptionDialog(null, "Temos um cardápio que consiste em: ", "Cardápio - Lanchonete do " + nome, JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, items, items[0]);
 }

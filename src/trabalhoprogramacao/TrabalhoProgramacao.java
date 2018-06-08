@@ -1,12 +1,11 @@
-
 package trabalhoprogramacao;
 
 import javax.swing.JOptionPane;
-public class TrabalhoProgramacao {
 
-    
-    public static void main(String[] args) {
-        //Mensagem de boas-vindas
+
+public class TrabalhoProgramacao {
+    public static void main(String[] args){
+       //Mensagem de boas-vindas
        String nome = JOptionPane.showInputDialog("Poderia informar seu nome?");
         JOptionPane.showMessageDialog(null, "Bem-vindo(a) a lanchonete do " +nome+ ".");
         
@@ -14,9 +13,9 @@ public class TrabalhoProgramacao {
         double custo = 0;
         double custoTotalDia = 0;
        //Botões
-        String[] items = {"Pizzas", "Salgados", "Doces", "Bebidas", "Finalizar", "Sair"};
+        String[] items = {"Pizzas", "Salgados", "Doces", "Bebidas", "Finalizar", "Caixa", "Sair"};
         int escolha = JOptionPane.showOptionDialog(null, "Temos um cardápio que consiste em: ", "Cardápio - Lanchonete do " + nome, JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, items, items[0]);
-        while(escolha != 5){
+        while(escolha != 6){
                 switch(escolha){
                     //Botão "Pizza"
                     case 0: 
@@ -42,13 +41,13 @@ public class TrabalhoProgramacao {
                                             JOptionPane.showMessageDialog(null, "Você comprou "+ quantidadeCalabresa +" Pizza(s) de Calabresa!");
                                     pizzaPequena = Integer.parseInt(JOptionPane.showInputDialog("Digite a opção do sabor desejado.\n" + "1 - Calabresa     -     R$ 14,75\n" + "2 - Pepperoni     -     R$ 16,50\n" + "3 - À moda da casa do Seu " + nome +"     -     R$ 17,99\n" + "4 - Mussarela     -     R$ 14,75\n" + "5 - Custo atual\n" + "6 - Retornar ao Cardápio"));} else if (finalizarCalabresa == JOptionPane.NO_OPTION) {
                                         custo += 0;
-                                        custoTotalDia = 0;
+                                        custoTotalDia += 0;
                                         
                                         
                                   pizzaPequena = Integer.parseInt(JOptionPane.showInputDialog("Digite a opção do sabor desejado.\n" + "1 - Calabresa     -     R$ 14,75\n" + "2 - Pepperoni     -     R$ 16,50\n" + "3 - À moda da casa do Seu " + nome +"     -     R$ 17,99\n" + "4 - Mussarela     -     R$ 14,75\n" + "5 - Custo atual\n" + "6 - Retornar ao Cardápio"));    
                                     }
                                 break;
-                                case 2:{
+                                case 2:
                                
                                     
                                       int finalizarPepperoni = JOptionPane.showOptionDialog(null, 
@@ -64,8 +63,8 @@ public class TrabalhoProgramacao {
                                         
                                   pizzaPequena = Integer.parseInt(JOptionPane.showInputDialog("Digite a opção do sabor desejado.\n" + "1 - Calabresa     -     R$ 14,75\n" + "2 - Pepperoni     -     R$ 16,50\n" + "3 - À moda da casa do Seu " + nome +"     -     R$ 17,99\n" + "4 - Mussarela     -     R$ 14,75\n" + "5 - Custo atual\n" + "6 - Retornar ao Cardápio"));      
                                     }                              
-                                break;}
-                                case 3:{
+                                break;
+                                case 3:
                                       int finalizarModa = JOptionPane.showOptionDialog(null, 
                                      "Você deseja comprar Pizza à moda da casa do Seu "+ nome,"", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, null, null);
                                     if (finalizarModa == JOptionPane.YES_OPTION){
@@ -79,8 +78,8 @@ public class TrabalhoProgramacao {
                                         
                                   pizzaPequena = Integer.parseInt(JOptionPane.showInputDialog("Digite a opção do sabor desejado.\n" + "1 - Calabresa     -     R$ 14,75\n" + "2 - Pepperoni     -     R$ 16,50\n" + "3 - À moda da casa do Seu " + nome +"     -     R$ 17,99\n" + "4 - Mussarela     -     R$ 14,75\n" + "5 - Custo atual\n" + "6 - Retornar ao Cardápio"));    
                                     }
-                                    break;}
-                                case 4: {
+                                    break;
+                                case 4: 
                                       int finalizarMussarela = JOptionPane.showOptionDialog(null, 
                                      "Você deseja comprar Pizza de Mussarela?","", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, null, null);
                                     if (finalizarMussarela == JOptionPane.YES_OPTION){
@@ -94,7 +93,7 @@ public class TrabalhoProgramacao {
                                         
                                   pizzaPequena = Integer.parseInt(JOptionPane.showInputDialog("Digite a opção do sabor desejado.\n" + "1 - Calabresa     -     R$ 14,75\n" + "2 - Pepperoni     -     R$ 16,50\n" + "3 - À moda da casa do Seu " + nome +"     -     R$ 17,99\n" + "4 - Mussarela     -     R$ 14,75\n" + "5 - Custo atual\n" + "6 - Retornar ao Cardápio"));     
                                     }
-                                    break;}
+                                    break;
                                 case 5: 
                                     JOptionPane.showMessageDialog(null, "O custo atual é: " + custo);
                                     pizzaPequena = Integer.parseInt(JOptionPane.showInputDialog("Digite a opção do sabor desejado.\n" + "1 - Calabresa     -     R$ 14,75\n" + "2 - Pepperoni     -     R$ 16,50\n" + "3 - À moda da casa do Seu " + nome +"     -     R$ 17,99\n" + "4 - Mussarela     -     R$ 14,75\n" + "5 - Custo atual\n" + "6 - Retornar ao Cardápio"));
@@ -126,8 +125,7 @@ public class TrabalhoProgramacao {
                                         custoTotalDia += 0;
                                         
                                  pizzaMedia = Integer.parseInt(JOptionPane.showInputDialog("Digite a opção do sabor desejado.\n" + "1 - Calabresa     -     R$ 24,75\n" + "2 - Pepperoni     -     R$ 26,50\n" + "3 - À moda da casa do Seu " + nome + "     -     R$ 27,99\n" + "4 - Mussarela     -     R$ 24,75\n" + "5 - Custo atual\n" + "6 - Retornar ao Cardápio"));
-                                
-                                  }
+                                    }
                                 break;
                                 case 2:
                                
@@ -180,7 +178,7 @@ public class TrabalhoProgramacao {
                                     JOptionPane.showMessageDialog(null, "O custo atual é: " + custo);
                                     pizzaMedia = Integer.parseInt(JOptionPane.showInputDialog("Digite a opção do sabor desejado.\n" + "1 - Calabresa     -     R$ 24,75\n" + "2 - Pepperoni     -     R$ 26,50\n" + "3 - À moda da casa do Seu " + nome + "     -     R$ 27,99\n" + "4 - Mussarela     -     R$ 24,75\n" + "5 - Custo atual\n" + "6 - Retornar ao Cardápio"));
                                 break; 
-                            }  
+                            } }
                         
                         } 
                     
@@ -189,7 +187,7 @@ public class TrabalhoProgramacao {
                      break;
                     
                     //Pizza grande
-                    case 2:
+                    case 2:{
                          int pizzaGrande = Integer.parseInt(JOptionPane.showInputDialog("Digite a opção do sabor desejado.\n" + "1 - Calabresa     -     R$ 34,75\n" + "2 - Pepperoni     -     R$ 36,50\n" + "3 - À moda da casa do Seu " + nome + "     -     R$ 37,99\n" + "4 - Mussarela     -     R$ 34,75\n" + "5 - Custo atual\n" + "6 - Retornar ao Cardápio"));
                         while (pizzaGrande != 6){
                             switch(pizzaGrande){
@@ -261,7 +259,7 @@ public class TrabalhoProgramacao {
                                   pizzaGrande = Integer.parseInt(JOptionPane.showInputDialog("Digite a opção do sabor desejado.\n" + "1 - Calabresa     -     R$ 34,75\n" + "2 - Pepperoni     -     R$ 36,50\n" + "3 - À moda da casa do Seu " + nome + "     -     R$ 37,99\n" + "4 - Mussarela     -     R$ 34,75\n" + "5 - Custo atual\n" + "6 - Retornar ao Cardápio"));
                                 break;
                             
-                    }
+                    }   }
                     
                   
                         } 
@@ -269,7 +267,7 @@ public class TrabalhoProgramacao {
                    
               escolhaPizza = JOptionPane.showOptionDialog(null, "Selecione o tamanho desejado. Os preços são diferentes conforme o tamanho da Pizza." , "Cardápio - Pizzas", JOptionPane.DEFAULT_OPTION, JOptionPane.QUESTION_MESSAGE, null, tamanhos, tamanhos[0]);  
               
-                        break;
+                        
                 }
               
         }
@@ -330,7 +328,7 @@ public class TrabalhoProgramacao {
                                     JOptionPane.showMessageDialog(null, "O custo atual é: R$" + custo);
                                     escolhaSalgado = Integer.parseInt(JOptionPane.showInputDialog("Digite a opção de salgado desejado." + "\n1 - Coxinha     -                   R$ 5,00" + "\n2 - Pão de Queijo     -         R$ 3,50" + "\n3 - Pastel de Carne     -     R$ 4,50" + "\n4 - Custo atual" + "\n5 - Retornar ao Cardápio"));
                                     break;
-         } break;
+         } 
                         }
                         
         escolha = JOptionPane.showOptionDialog(null, "Temos um cardápio que consiste em: ", "Cardápio - Lanchonete do " + nome, JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, items, items[0]);
@@ -369,8 +367,9 @@ public class TrabalhoProgramacao {
                                         custo += 0;
                                         custoTotalDia += 0;
                                         escolhaDoces = Integer.parseInt(JOptionPane.showInputDialog("Digite a opção de doce desejado." + "\n1 - Bolo                -     R$ 4,50" + "\n2 - Chocolate     -     R$ 4,00" + "\n3 - Cuca              -     R$ 3,00" + "\n4 - Custo atual" + "\n5 - Retornar ao menu"));
-                                        break;
+                                        
                               }
+                                    break;
                                   case 3: 
                                       int finalizarCuca = JOptionPane.showOptionDialog(null, 
                                      "Você deseja comprar Cuca?","", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, null, null);
@@ -385,14 +384,15 @@ public class TrabalhoProgramacao {
                                         custo += 0;
                                         custoTotalDia += 0;
                                         escolhaDoces = Integer.parseInt(JOptionPane.showInputDialog("Digite a opção de doce desejado." + "\n1 - Bolo                -     R$ 4,50" + "\n2 - Chocolate     -     R$ 4,00" + "\n3 - Cuca              -     R$ 3,00" + "\n4 - Custo atual" + "\n5 - Retornar ao menu"));
-                                        break;
+                                        
                               }
+                              break;
                                   case 4:
                                       JOptionPane.showMessageDialog(null, "O custo atual é: R$" + custo);
                                       escolhaDoces = Integer.parseInt(JOptionPane.showInputDialog("Digite a opção de doce desejado." + "\n1 - Bolo                -     R$ 4,50" + "\n2 - Chocolate     -     R$ 4,00" + "\n3 - Cuca              -     R$ 3,00" + "\n4 - Custo atual" + "\n5 - Retornar ao menu"));
                                       break;
                               }
-                              break;
+                              
                         }
                         
         escolha = JOptionPane.showOptionDialog(null, "Temos um cardápio que consiste em: ", "Cardápio - Lanchonete do " + nome, JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, items, items[0]);
@@ -504,7 +504,7 @@ public class TrabalhoProgramacao {
                                     int quantidadeCoca = Integer.parseInt(JOptionPane.showInputDialog("Quantas?")); 
                                             custo += (quantidadeCoca * 8.00);
                                             custoTotalDia += (quantidadeCoca * 8.00);
-                                            JOptionPane.showMessageDialog(null, "Você comprou "+ quantidadeCoca +" garrafinha(s) de Coca-Cola!");
+                                            JOptionPane.showMessageDialog(null, "Você comprou "+ quantidadeCoca +" garrafa(s) de Coca-Cola!");
                                   escolhaRefri15l = JOptionPane.showOptionDialog(null, "Selecione o sabor do Refrigerante desejado:" + "\nCoca-Cola - R$ 8,00" + "\nPepsi - R$ 7,50" + "\nGuaraná - R$ 6,00" + "\nJesus - R$ 5,00", "Refrigerantes - 1,5 litros", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, refri15l, refri15l[0]);}
                                     else if(finalizarCoca == JOptionPane.NO_OPTION){
                                      
@@ -520,7 +520,7 @@ public class TrabalhoProgramacao {
                                     int quantidadePepsi = Integer.parseInt(JOptionPane.showInputDialog("Quantas?")); 
                                             custo += (quantidadePepsi * 7.50);
                                             custoTotalDia += (quantidadePepsi * 7.50);
-                                            JOptionPane.showMessageDialog(null, "Você comprou "+ quantidadePepsi +" garrafinha(s) de Pepsi!");
+                                            JOptionPane.showMessageDialog(null, "Você comprou "+ quantidadePepsi +" garrafa(s) de Pepsi!");
                                 escolhaRefri15l = JOptionPane.showOptionDialog(null, "Selecione o sabor do Refrigerante desejado:" + "\nCoca-Cola - R$ 8,00" + "\nPepsi - R$ 7,50" + "\nGuaraná - R$ 6,00" + "\nJesus - R$ 5,00", "Refrigerantes - 1,5 litros", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, refri15l, refri15l[0]);}
                                     else if(finalizarPepsi == JOptionPane.NO_OPTION){
                                      
@@ -536,7 +536,7 @@ public class TrabalhoProgramacao {
                                     int quantidadeGuarana = Integer.parseInt(JOptionPane.showInputDialog("Quantas?")); 
                                             custo += (quantidadeGuarana * 6.00);
                                             custoTotalDia += (quantidadeGuarana * 6.00);
-                                            JOptionPane.showMessageDialog(null, "Você comprou "+ quantidadeGuarana +" garrafinha(s) de Guarana!");
+                                            JOptionPane.showMessageDialog(null, "Você comprou "+ quantidadeGuarana +" garrafa(s) de Guarana!");
                                   escolhaRefri15l = JOptionPane.showOptionDialog(null, "Selecione o sabor do Refrigerante desejado:" + "\nCoca-Cola - R$ 8,00" + "\nPepsi - R$ 7,50" + "\nGuaraná - R$ 6,00" + "\nJesus - R$ 5,00", "Refrigerantes - 1,5 litros", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, refri15l, refri15l[0]);}
                                     else if(finalizarGuarana == JOptionPane.NO_OPTION){
                                      
@@ -552,10 +552,10 @@ public class TrabalhoProgramacao {
                                     int quantidadeJesus = Integer.parseInt(JOptionPane.showInputDialog("Quantas?"));
                                      if(quantidadeJesus == 2){custo += (quantidadeJesus * 5.00) - 1;
                                                               custoTotalDia += (quantidadeJesus * 5.00) - 1;
-                                     JOptionPane.showMessageDialog(null, "Preço de "+ quantidadeJesus +" garrafinhas de Jesus custa R$ 9.00, porque só Jesus é 10! xD");}
+                                     JOptionPane.showMessageDialog(null, "Preço de "+ quantidadeJesus +" garrafas de Jesus custa R$ 9.00, porque só Jesus é 10! xD");}
                                      else {custo += (quantidadeJesus * 5.00);
                                            custoTotalDia += (quantidadeJesus * 5.00);}
-                                            JOptionPane.showMessageDialog(null, "Você comprou "+ quantidadeJesus +" garrafinha(s) de Jesus!");
+                                            JOptionPane.showMessageDialog(null, "Você comprou "+ quantidadeJesus +" garrafa(s) de Jesus!");
                                   escolhaRefri15l = JOptionPane.showOptionDialog(null, "Selecione o sabor do Refrigerante desejado:" + "\nCoca-Cola - R$ 8,00" + "\nPepsi - R$ 7,50" + "\nGuaraná - R$ 6,00" + "\nJesus - R$ 5,00", "Refrigerantes - 1,5 litros", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, refri15l, refri15l[0]);}
                                     else if(finalizarJesus == JOptionPane.NO_OPTION){
                                      
@@ -602,10 +602,10 @@ public class TrabalhoProgramacao {
                                      break;
                                         case 1:
                                             int finalizarCappuccino = JOptionPane.showOptionDialog(null, 
-                                     "Você deseja comprar Cappuccino","", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, null, null);
+                                     "Você deseja comprar Cappuccino?","", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, null, null);
                                     if (finalizarCappuccino == JOptionPane.YES_OPTION){
                                     int quantidadeCappuccino = Integer.parseInt(JOptionPane.showInputDialog("Quantos?"));
-                                     if(quantidadeCappuccino == 77){custo += (quantidadeCappuccino * 3.00);
+                                     if(quantidadeCappuccino == 7772){custo += (quantidadeCappuccino * 3.00);
                                                                     custoTotalDia += (quantidadeCappuccino * 3.00);
                                      JOptionPane.showMessageDialog(null, "É Cappuccino ou Al Pacino? xD");}
                                      else {custo += (quantidadeCappuccino * 5.00);
@@ -746,10 +746,29 @@ public class TrabalhoProgramacao {
                                
                             }
                             escolha = JOptionPane.showOptionDialog(null, "Temos um cardápio que consiste em: ", "Cardápio - Lanchonete do " + nome, JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, items, items[0]);
-    }
-}
-        
-    }
-}
+                            
+                        case 4:
+                            int finalizarPedido = JOptionPane.showOptionDialog(null, 
+                                     "Você deseja finalizar o pedido?","", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, null, null);
+                                    if (finalizarPedido == JOptionPane.YES_OPTION){
+                                     
+                                            custo = 0;
+                                            JOptionPane.showMessageDialog(null, "Você finalizou o pedido. " + "\nCusto atual: R$" + custo);
+                                            
+                                    } else if (finalizarPedido == JOptionPane.NO_OPTION){
+                                     
+                                        JOptionPane.showMessageDialog(null, "Você não cancelou o pedido.");
+                                        
+                                    }
+                                    break;
+                        case 5:
+                            if (nome.equalsIgnoreCase("pessini")){
+                                JOptionPane.showMessageDialog(null, "Pô, professor! Me dá um dez aí! :D");
+                            }
+                            JOptionPane.showMessageDialog(null, "O caixa atual está com: R$ " + custoTotalDia);
+                    }           
     
+         escolha = JOptionPane.showOptionDialog(null, "Temos um cardápio que consiste em: ", "Cardápio - Lanchonete do " + nome, JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, items, items[0]);
+}
+}
 }
