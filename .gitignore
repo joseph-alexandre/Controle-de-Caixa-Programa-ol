@@ -26,3 +26,5 @@ build/classes/.netbeans_automatic_build
 build/classes/.netbeans_update_resources
 *.mf
 *.properties
+/nbproject/private/
+/build/

@@ -534,8 +534,8 @@ public class TrabalhoProgramacao {
                                      "Você deseja comprar Cappuccino","", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, null, null);
                                     if (finalizarCappuccino == JOptionPane.YES_OPTION){
                                     int quantidadeCappuccino = Integer.parseInt(JOptionPane.showInputDialog("Quantos?"));
-                                     if(quantidadeCappuccino == 7){custo += (quantidadeCappuccino * 3.00);
-                                     JOptionPane.showMessageDialog(null, "É cappuccino ou Al Pacino? xD");}
+                                     if(quantidadeCappuccino == 77){custo += (quantidadeCappuccino * 3.00);
+                                     JOptionPane.showMessageDialog(null, "É Cappuccino ou Al Pacino? xD");}
                                      else {custo += (quantidadeCappuccino * 5.00);}
                                             JOptionPane.showMessageDialog(null, "Você comprou "+ quantidadeCappuccino +" xícara(s) de Cappuccino!");
                                   cafeEscolha = JOptionPane.showOptionDialog(null, "Selecione o sabor desejado: " + "\nCafé Expresso - R$ 1.50" + "\nCappuccino - R$ 3,00" + "\nCappuccino com Chocolate - R$ 4,50", "Bebidas - Café", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, cafeSabores, cafeSabores[0]);}
@@ -565,16 +565,16 @@ public class TrabalhoProgramacao {
                                 //tipo de Água
                                     case 3:
                                   String[] tipoAgua = {"Com Gás", "Sem Gás", "Sair"};
-        int aguaTipoEscolha = JOptionPane.showOptionDialog(null, "Selecione o tipo de água desejado:", "Bebidas - Água", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, tipoAgua, tipoAgua[0]);
-                                   while (aguaTipoEscolha != 2){
-                                       switch(aguaTipoEscolha){
-                                           case 0:
-                                               String[] tamanhoAgua = {"500ml", "1,5 litros", "Sair"};
+                                  int tipoAguaEscolha = JOptionPane.showOptionDialog(null, "Selecione o tipo de água desejado:", "Bebidas - Água", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, tipoAgua, tipoAgua[0]);
+                                  while(tipoAguaEscolha != 2){
+                                      switch(tipoAguaEscolha){
+                                          case 0:
+                                              String[] tamanhoAgua = {"500ml", "1,5 litros", "Sair"};
         int aguaTamanhoEscolhaComGas = JOptionPane.showOptionDialog(null, "Selecione o tamanho de água desejado:" + "\n500ml - R$ 3,50" + "\n1,5 litros - R$5,50", "Bebidas - Água", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, tamanhoAgua, tamanhoAgua[0]);
-                                    while (aguaTamanhoEscolhaComGas != 2){
-                                        switch(aguaTamanhoEscolhaComGas){
-                                            case 0:
-                                                int finalizar500ml = JOptionPane.showOptionDialog(null, 
+                        while(aguaTamanhoEscolhaComGas != 2){
+                            switch(aguaTamanhoEscolhaComGas){
+                                case 0: 
+                                    int finalizar500ml = JOptionPane.showOptionDialog(null, 
                                      "Você deseja comprar garrafinha d'água 500ml?","", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, null, null);
                                     if (finalizar500ml == JOptionPane.YES_OPTION){
                                     int quantidade500ml = Integer.parseInt(JOptionPane.showInputDialog("Quantas?")); 
@@ -586,7 +586,7 @@ public class TrabalhoProgramacao {
                                         custo += 0;
                                         aguaTamanhoEscolhaComGas = JOptionPane.showOptionDialog(null, "Selecione o tamanho de água desejado:" + "\n500ml - R$ 3,50" + "\n1,5 litros - R$5,50", "Bebidas - Água", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, tamanhoAgua, tamanhoAgua[0]);}
                                                 break;
-                                            case 1:
+                                                case 1:
                                                 int finalizar15l = JOptionPane.showOptionDialog(null, 
                                      "Você deseja comprar garrafa d'água 1,5 litros?","", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, null, null);
                                     if (finalizar15l == JOptionPane.YES_OPTION){
@@ -600,11 +600,10 @@ public class TrabalhoProgramacao {
                                         aguaTamanhoEscolhaComGas = JOptionPane.showOptionDialog(null, "Selecione o tamanho de água desejado:" + "\n500ml - R$ 3,50" + "\n1,5 litros - R$5,50", "Bebidas - Água", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, tamanhoAgua, tamanhoAgua[0]);}
                                     
                                     break;
-                                                
-                                                
-                                        } break;
-                                    }
-                                    aguaTipoEscolha = JOptionPane.showOptionDialog(null, "Selecione o tipo de água desejado:", "Bebidas - Água", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, tipoAgua, tipoAgua[0]);
+                                    
+                            }
+                        }
+                        tipoAguaEscolha = JOptionPane.showOptionDialog(null, "Selecione o tipo de água desejado:", "Bebidas - Água", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, tipoAgua, tipoAgua[0]);
                                     break;
                                            case 1:
                                                String[] tamanhoAguaSemGas = {"500ml", "1,5 litros", "Sair"};
@@ -612,52 +611,60 @@ public class TrabalhoProgramacao {
                                     while (aguaTamanhoEscolhaSemGas != 2){
                                         switch(aguaTamanhoEscolhaSemGas){
                                             case 0:
-                                                int finalizar500ml = JOptionPane.showOptionDialog(null, 
-                                     "Você deseja comprar garrafinha d'água 500ml?","", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, null, null);
+                                                 int finalizar500ml = JOptionPane.showOptionDialog(null, 
+                                     "Você deseja comprar garrafa(s) d'água de 500ml?","", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, null, null);
                                     if (finalizar500ml == JOptionPane.YES_OPTION){
                                     int quantidade500ml = Integer.parseInt(JOptionPane.showInputDialog("Quantas?")); 
                                             custo += (quantidade500ml * 3.50);
-                                            JOptionPane.showMessageDialog(null, "Você comprou "+ quantidade500ml +" garrafinha(s) d'água 500ml!");
+                                            JOptionPane.showMessageDialog(null, "Você comprou "+ quantidade500ml +" garrafa(s) d'água de 500ml!");
                                   aguaTamanhoEscolhaSemGas = JOptionPane.showOptionDialog(null, "Selecione o tamanho de água desejado:" + "\n500ml - R$ 3,50" + "\n1,5 litros - R$5,50", "Bebidas - Água", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, tamanhoAguaSemGas, tamanhoAguaSemGas[0]);}
                                     else if(finalizar500ml == JOptionPane.NO_OPTION){
                                      
                                         custo += 0;
                                         aguaTamanhoEscolhaSemGas = JOptionPane.showOptionDialog(null, "Selecione o tamanho de água desejado:" + "\n500ml - R$ 3,50" + "\n1,5 litros - R$5,50", "Bebidas - Água", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, tamanhoAguaSemGas, tamanhoAguaSemGas[0]);}
                                                 break;
+                                                
                                             case 1:
                                                 int finalizar15l = JOptionPane.showOptionDialog(null, 
-                                     "Você deseja comprar garrafa d'água 1,5 litros?","", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, null, null);
+                                     "Você deseja comprar garrafa(s) d'água de 1,5 litros?","", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, null, null);
                                     if (finalizar15l == JOptionPane.YES_OPTION){
                                     int quantidade15l = Integer.parseInt(JOptionPane.showInputDialog("Quantas?")); 
                                             custo += (quantidade15l * 5.50);
-                                            JOptionPane.showMessageDialog(null, "Você comprou "+ quantidade15l +" garrafa(s) d'água 1,5 litros!");
-                                 aguaTamanhoEscolhaSemGas = JOptionPane.showOptionDialog(null, "Selecione o tamanho de água desejado:" + "\n500ml - R$ 3,50" + "\n1,5 litros - R$5,50", "Bebidas - Água", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, tamanhoAguaSemGas, tamanhoAguaSemGas[0]);}
+                                            JOptionPane.showMessageDialog(null, "Você comprou "+ quantidade15l +" garrafa(s) d'água de 1,5 litros!");
+                                  aguaTamanhoEscolhaSemGas = JOptionPane.showOptionDialog(null, "Selecione o tamanho de água desejado:" + "\n500ml - R$ 3,50" + "\n1,5 litros - R$5,50", "Bebidas - Água", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, tamanhoAguaSemGas, tamanhoAguaSemGas[0]);}
                                     else if(finalizar15l == JOptionPane.NO_OPTION){
                                      
                                         custo += 0;
                                         aguaTamanhoEscolhaSemGas = JOptionPane.showOptionDialog(null, "Selecione o tamanho de água desejado:" + "\n500ml - R$ 3,50" + "\n1,5 litros - R$5,50", "Bebidas - Água", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, tamanhoAguaSemGas, tamanhoAguaSemGas[0]);}
-                                    
+                                                break;
+                                                
+                                                
+                                          
+                                      }
+                                  }
+                                    tipoAguaEscolha = JOptionPane.showOptionDialog(null, "Selecione o tipo de água desejado:", "Bebidas - Água", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, tipoAgua, tipoAgua[0]);
                                     break;
-                                               
-                                               
-                                       } break;
-                                   }
-                                   escolhaBebidas = Integer.parseInt(JOptionPane.showInputDialog("Digite a opção de bebida desejada." + "\n1 - Refrigerante     -     (Conferir sabores)" + "\n2 - Café     -                    (Conferir sabores)" + "\n3 - Água     -                   (Conferir tamanhos)" + "\n4 - Custo atual" + "\n5 - Retornar ao menu"));
-                                        break;
-                                
-                                       }
-                                break;
-
-                            }
-                           aguaTipoEscolha = JOptionPane.showOptionDialog(null, "Selecione o tipo de água desejado:", "Bebidas - Água", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, tipoAgua, tipoAgua[0]);
                             
                                 }
+                                  
         
     }
-                            escolha = JOptionPane.showOptionDialog(null, "Temos um cardápio que consiste em: ", "Cardápio - Lanchonete do Zé", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, items, items[0]);
+                                 escolhaBebidas = Integer.parseInt(JOptionPane.showInputDialog("Digite a opção de bebida desejada." + "\n1 - Refrigerante     -     (Conferir sabores)" + "\n2 - Café     -                    (Conferir sabores)" + "\n3 - Água     -                   (Conferir tamanhos)" + "\n4 - Custo atual" + "\n5 - Retornar ao menu"));
+                                    break;
+                            
     
+                                case 4: 
+                                 JOptionPane.showMessageDialog(null, "O custo atual é: R$" + custo);
+                                    escolhaBebidas = Integer.parseInt(JOptionPane.showInputDialog("Digite a opção de bebida desejada." + "\n1 - Refrigerante     -     (Conferir sabores)" + "\n2 - Café     -                    (Conferir sabores)" + "\n3 - Água     -                   (Conferir tamanhos)" + "\n4 - Custo atual" + "\n5 - Retornar ao menu"));
+                                    break;
+                                }
+                            
+                               
+                            }
+                            escolha = JOptionPane.showOptionDialog(null, "Temos um cardápio que consiste em: ", "Cardápio - Lanchonete do Zé", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, items, items[0]);
     }
-        }
+}
+        
     }
 }
     
