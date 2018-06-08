@@ -505,7 +505,7 @@ public class teste {
                                     int quantidadeCoca = Integer.parseInt(JOptionPane.showInputDialog("Quantas?")); 
                                             custo += (quantidadeCoca * 8.00);
                                             custoTotalDia += (quantidadeCoca * 8.00);
-                                            JOptionPane.showMessageDialog(null, "Você comprou "+ quantidadeCoca +" garrafinha(s) de Coca-Cola!");
+                                            JOptionPane.showMessageDialog(null, "Você comprou "+ quantidadeCoca +" garrafa(s) de Coca-Cola!");
                                   escolhaRefri15l = JOptionPane.showOptionDialog(null, "Selecione o sabor do Refrigerante desejado:" + "\nCoca-Cola - R$ 8,00" + "\nPepsi - R$ 7,50" + "\nGuaraná - R$ 6,00" + "\nJesus - R$ 5,00", "Refrigerantes - 1,5 litros", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, refri15l, refri15l[0]);}
                                     else if(finalizarCoca == JOptionPane.NO_OPTION){
                                      
@@ -521,7 +521,7 @@ public class teste {
                                     int quantidadePepsi = Integer.parseInt(JOptionPane.showInputDialog("Quantas?")); 
                                             custo += (quantidadePepsi * 7.50);
                                             custoTotalDia += (quantidadePepsi * 7.50);
-                                            JOptionPane.showMessageDialog(null, "Você comprou "+ quantidadePepsi +" garrafinha(s) de Pepsi!");
+                                            JOptionPane.showMessageDialog(null, "Você comprou "+ quantidadePepsi +" garrafa(s) de Pepsi!");
                                 escolhaRefri15l = JOptionPane.showOptionDialog(null, "Selecione o sabor do Refrigerante desejado:" + "\nCoca-Cola - R$ 8,00" + "\nPepsi - R$ 7,50" + "\nGuaraná - R$ 6,00" + "\nJesus - R$ 5,00", "Refrigerantes - 1,5 litros", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, refri15l, refri15l[0]);}
                                     else if(finalizarPepsi == JOptionPane.NO_OPTION){
                                      
@@ -537,7 +537,7 @@ public class teste {
                                     int quantidadeGuarana = Integer.parseInt(JOptionPane.showInputDialog("Quantas?")); 
                                             custo += (quantidadeGuarana * 6.00);
                                             custoTotalDia += (quantidadeGuarana * 6.00);
-                                            JOptionPane.showMessageDialog(null, "Você comprou "+ quantidadeGuarana +" garrafinha(s) de Guarana!");
+                                            JOptionPane.showMessageDialog(null, "Você comprou "+ quantidadeGuarana +" garrafa(s) de Guarana!");
                                   escolhaRefri15l = JOptionPane.showOptionDialog(null, "Selecione o sabor do Refrigerante desejado:" + "\nCoca-Cola - R$ 8,00" + "\nPepsi - R$ 7,50" + "\nGuaraná - R$ 6,00" + "\nJesus - R$ 5,00", "Refrigerantes - 1,5 litros", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, refri15l, refri15l[0]);}
                                     else if(finalizarGuarana == JOptionPane.NO_OPTION){
                                      
@@ -553,10 +553,10 @@ public class teste {
                                     int quantidadeJesus = Integer.parseInt(JOptionPane.showInputDialog("Quantas?"));
                                      if(quantidadeJesus == 2){custo += (quantidadeJesus * 5.00) - 1;
                                                               custoTotalDia += (quantidadeJesus * 5.00) - 1;
-                                     JOptionPane.showMessageDialog(null, "Preço de "+ quantidadeJesus +" garrafinhas de Jesus custa R$ 9.00, porque só Jesus é 10! xD");}
+                                     JOptionPane.showMessageDialog(null, "Preço de "+ quantidadeJesus +" garrafas de Jesus custa R$ 9.00, porque só Jesus é 10! xD");}
                                      else {custo += (quantidadeJesus * 5.00);
                                            custoTotalDia += (quantidadeJesus * 5.00);}
-                                            JOptionPane.showMessageDialog(null, "Você comprou "+ quantidadeJesus +" garrafinha(s) de Jesus!");
+                                            JOptionPane.showMessageDialog(null, "Você comprou "+ quantidadeJesus +" garrafa(s) de Jesus!");
                                   escolhaRefri15l = JOptionPane.showOptionDialog(null, "Selecione o sabor do Refrigerante desejado:" + "\nCoca-Cola - R$ 8,00" + "\nPepsi - R$ 7,50" + "\nGuaraná - R$ 6,00" + "\nJesus - R$ 5,00", "Refrigerantes - 1,5 litros", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, refri15l, refri15l[0]);}
                                     else if(finalizarJesus == JOptionPane.NO_OPTION){
                                      
@@ -747,8 +747,24 @@ public class teste {
                                
                             }
                             escolha = JOptionPane.showOptionDialog(null, "Temos um cardápio que consiste em: ", "Cardápio - Lanchonete do " + nome, JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, items, items[0]);
-    }
-}
+                            
+                        case 4:
+                            int finalizarPedido = JOptionPane.showOptionDialog(null, 
+                                     "Você deseja finalizar o pedido?","", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, null, null);
+                                    if (finalizarPedido == JOptionPane.YES_OPTION){
+                                     
+                                            custo = 0;
+                                            JOptionPane.showMessageDialog(null, "Você finalizou o pedido. " + "\nCusto atual: " + custo);
+                                            
+                                    } else if (finalizarPedido == JOptionPane.NO_OPTION){
+                                     
+                                        JOptionPane.showMessageDialog(null, "Você não cancelou o pedido.");
+                                        
+                                    }
+                                    break;
+}           
     
+         escolha = JOptionPane.showOptionDialog(null, "Temos um cardápio que consiste em: ", "Cardápio - Lanchonete do " + nome, JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, items, items[0]);
+}
 }
 }
